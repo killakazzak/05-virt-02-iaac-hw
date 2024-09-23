@@ -73,6 +73,8 @@ Error: The requested URL returned error: 404:
 
 ## Решение Задача 3
 
+[mydebian.json](https://github.com/killakazzak/05-virt-02-iaac-hw/blob/main/mydebian.json)
+
 [mydebian.json.pkr.hcl](https://github.com/killakazzak/05-virt-02-iaac-hw/blob/main/mydebian.json.pkr.hcl)
 
 ```hcl
