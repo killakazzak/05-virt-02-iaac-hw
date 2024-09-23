@@ -73,7 +73,7 @@ Error: The requested URL returned error: 404:
 
 ## Решение Задача 3
 
-mydebian.json.pkr.hcl
+[mydebian.json.pkr.hcl]()
 
 ```hcl
 source "yandex" "debian_docker" {
