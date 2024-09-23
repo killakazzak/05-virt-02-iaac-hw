@@ -70,3 +70,38 @@ Error: The requested URL returned error: 404:
 7. Удалите ВМ и образ.
 8. **ВНИМАНИЕ!** Никогда не выкладываете oauth token от облака в git-репозиторий! Утечка секретного токена может привести к финансовым потерям. После выполнения задания обязательно удалите секретные данные из файла mydebian.json и mydebian.json.pkr.hcl. (замените содержимое токена на  "ххххх")
 9. В качестве ответа на задание  загрузите результирующий файл в ваш ЛК.
+
+## Решение Задача 3
+
+mydebian.json.pkr.hcl
+
+```hcl
+source "yandex" "debian_docker" {
+  disk_type           = "network-hdd"
+  folder_id           = "b1g3hhpc4sj7fmtmdccu"
+  image_description   = "my custom debian with docker"
+  image_name          = "debian-11-docker"
+  source_image_family = "debian-11"
+  ssh_username        = "debian"
+  subnet_id           = "e9bang8tpj4mbo92gvr6"
+  token               = "y0_AgAAAAAEOSJRAA*****************"
+  use_ipv4_nat        = true
+  zone                = "ru-central1-a"
+}
+
+build {
+  sources = ["source.yandex.debian_docker"]
+
+  provisioner "shell" {
+    inline = ["echo 'hello from packer'"]
+  }
+
+}
+```
+
+```bash
+yc compute image list
+```
+
+![image](https://github.com/user-attachments/assets/19517da2-d0ca-4a16-ad2e-c4bbf54ee3c2)
+
