@@ -104,6 +104,8 @@ build {
 ```bash
 yc compute image list
 ```
+![image](https://github.com/user-attachments/assets/422f580f-88b4-4e96-95e6-18402876928f)
+
 
 ![image](https://github.com/user-attachments/assets/19517da2-d0ca-4a16-ad2e-c4bbf54ee3c2)
 
